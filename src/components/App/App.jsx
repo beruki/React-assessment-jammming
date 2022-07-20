@@ -40,7 +40,7 @@ class App extends Component {
     let tracks = this.state.playlistTracks;
     tracks = tracks.filter(currentTrack => currentTrack.id !== track.id);
 
-    this.setState({ playlistTracks: tracks })
+    this.setState({playlistTracks: tracks})
   }
 
   updatePlaylistName(name) {
@@ -48,8 +48,8 @@ class App extends Component {
   }
 
   savePlaylist() {
-    const trackIds = this.state.playlistTracks.map(track => track.uri);
-    Spotify.savePlaylist(this.state.playlistId, trackIds).then (() => {
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then (() => {
       then.setState({
         playlistName: 'New Playlist',
         playlistTracks: []
@@ -58,9 +58,10 @@ class App extends Component {
   }
 
   search(term) {
+    console.log(term);
     Spotify.search(term).then(searchResults => {
-      this.setState ({searchResults : searchResults})
-    })
+      this.setState({searchResults: searchResults})
+    });
   }
 
   render() {
@@ -70,7 +71,7 @@ class App extends Component {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          <SearchBar onSearch = {this.search} />
+          <SearchBar onClick = {this.search} />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} 
                                           onAdd = {this.addTrack}/>
