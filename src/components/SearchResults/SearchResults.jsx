@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 //import SearchResults.css
+import "./SearchResults.css";
 
 class SearchResults extends Component {
   render() {
