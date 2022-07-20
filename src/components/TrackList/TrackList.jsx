@@ -5,7 +5,7 @@ import "./TrackList.css";
 
 class TrackList extends Component {
   render() {
-    return <div>TrackList</div>;
+    return <div className="TrackList">TrackList</div>;
   }
 }
 

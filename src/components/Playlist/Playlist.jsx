@@ -5,7 +5,13 @@ import "./Playlist.css";
 
 class Playlist extends Component {
   render() {
-    return <div>Playlist</div>;
+    return (
+    <div className="Playlist">
+      <input defaultValue={"New Playlist ✨"} />
+      {/* <TrackList /> */}
+      <button className="Playlist-save">Save to Spontify</button>
+      </div>
+    )
   }
 }
 

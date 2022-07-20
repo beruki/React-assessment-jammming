@@ -5,6 +5,8 @@ import "./App.css";
 
 //import 3 component
 import SearchBar from "../SearchBar/SearchBar";
+import SearchResults from "../SearchResults/SearchResults";
+import Playlist from "../Playlist/Playlist";
 
 class App extends Component {
   render() {
@@ -16,8 +18,8 @@ class App extends Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            {/* <SearchResults /> */}
-            {/* <SearchPlaylist /> */}
+            <SearchResults />
+            <Playlist />
           </div>
         </div>
       </div>
