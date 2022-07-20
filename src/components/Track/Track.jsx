@@ -17,9 +17,13 @@ class Track extends Component {
   render() {
     return (
       <div className="Track">
-        <div className="Track-infomation">
+        <div className="Track-information">
           <h3>{this.props.track.name}</h3>
           <p>{this.props.track.artist} | {this.props.track.album}</p>
+
+          {/* <h3>track title</h3>
+          <p>track artist | track name</p> */}
+
         </div>
         {this.renderAction()}
       </div>
