@@ -26,7 +26,7 @@ class SearchBar extends Component {
   render() {
     return  (
       <div className="SearchBar">
-          <input onChange={this.handleTermChange} placeholder="Artists, Songs, Lyrics, Album 🎤"/>
+          <input onChange={this.handleTermChange} placeholder="Enter a song title here. 🎤"/>
           <button onClick={this.search} className="SearchButton">SEARCH</button>
       </div>
       );

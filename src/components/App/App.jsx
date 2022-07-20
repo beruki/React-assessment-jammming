@@ -49,8 +49,8 @@ class App extends Component {
 
   savePlaylist() {
     const trackUris = this.state.playlistTracks.map(track => track.uri);
-    Spotify.savePlaylist(this.state.playlistName, trackUris).then (() => {
-      then.setState({
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+      this.setState({
         playlistName: 'New Playlist',
         playlistTracks: []
       })
@@ -71,7 +71,7 @@ class App extends Component {
           Ja<span className="highlight">mmm</span>ing
         </h1>
         <div className="App">
-          <SearchBar onClick = {this.search} />
+          <SearchBar onSearch = {this.search} />
           <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults} 
                                           onAdd = {this.addTrack}/>
