@@ -5,7 +5,12 @@ import "./SearchBar.css";
 
 class SearchBar extends Component {
   render() {
-    return <div>SearchBar</div>;
+    return  (
+      <div className="SearchBar">
+          <input placeholder="Artists, Songs, Lyrics, Albumn 🎤"/>
+          <button className="SearchButton">SEARCH</button>
+      </div>
+      )
   }
 }
 
