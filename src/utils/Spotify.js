@@ -1,6 +1,11 @@
 // TODO: Get Client ID from https://developer.spotify.com/dashboard/ and put it here
 const clientId = "d226d49115df452e8ca3afa1dc2fd663";
 
+const redirectUri = "http://localhost:5173/";
+const spotifyUrl = `https://accounts.spotify.com/authorize?response_type=token&scope=playlist-modify-public&client_id=${clientId}&redirect_uri=${redirectUri}`;
+let accessToken = undefined;
+let expiresIn = undefined;
+
 const Spotify = {
   getAccessToken() {
     if(accessToken) {
