@@ -6,6 +6,11 @@ let accessToken = undefined;
 let expiresIn = undefined;
 
 
+const redirectUri = "http://localhost:5173/";
+const spotifyUrl = `https://accounts.spotify.com/authorize?response_type=token&scope=playlist-modify-public&client_id=${clientId}&redirect_uri=${redirectUri}`;
+let accessToken = undefined;
+let expiresIn = undefined;
+
 const Spotify = {
   getAccessToken() {
     if(accessToken) {
